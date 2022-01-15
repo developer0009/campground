@@ -1,0 +1,43 @@
+<% layout('layouts/boilerplate.ejs')%>
+    <h3 class="text-center ">Create Campground</h3>
+    <div class="row mt-5">
+        <div class="col-6 offset-3">
+            <form action="/" method="post">
+                <div class="mb-3">
+                    <label for="exampleInputTitle" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="emailHelp"
+                        name="campground[title]" placeholder="enter title">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputLocation" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="exampleInputLocation" name="campground[location]"
+                        placeholder="enter location">
+                </div>
+                <div class="mb-3">
+                    <label for="ImageUrl" class="form-label">ImageURL</label>
+                    <input type="text" class="form-control" id="ImageUrl" name="campground[image]"
+                        placeholder="enter image url">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">$</span>
+                    <input type="text" class="form-control" placeholder="0.00" aria-label="Price"
+                        aria-describedby="basic-addon1" name="campground[price]">
+                </div>
+                <div class="mb-3">
+                    <select name="campground[available]" class="form-select">
+                        <option selected>select for availibility</option>
+                        <option value="true">yes</option>
+                        <option value="false">no</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="textarea" class="form-label">Description</label>
+                    <textarea name="campground[description]" id="textarea" class="form-control"
+                        placeholder="enter description"></textarea>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-success">Create Campground</button>
+                </div>
+            </form>
+        </div>
+    </div>
